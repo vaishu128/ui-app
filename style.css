@@ -1,0 +1,118 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f0f2f5;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 700px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    font-weight: 700;
+    color: #2c3e50;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #3498db;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.appliance-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.appliance-item {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.appliance-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.appliance-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.appliance-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.appliance-name {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.appliance-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.appliance-controls label {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-weight: 500;
+}
+
+.custom-range {
+    width: 150px;
+}
+
+.toggle-btn {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.toggle-btn.active {
+    background-color: #27ae60;
+}
+
+.toggle-btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
